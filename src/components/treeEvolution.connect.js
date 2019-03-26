@@ -1,17 +1,10 @@
 import {connect} from 'react-redux';
-import MovieExpComp from './movieExp.component';
-import MovieExpApi from '../sdk/movieExp.api';
-import appConfig from '../App.config';
-
-const config = appConfig.configApi;
-const movieExpApi = new MovieExpApi({
-    config
-});
+import TreeEvolutionComponent from './treeEvolution.component';
+import api from '../treeEvolution.api';
 
 const mapStateToProps = () => {
     return {
-        movieList: movieExpApi.getMoviesList(),
-        noDataFoundIndicator: movieExpApi.getNoDataFoundIndicator()
+        parentProps: api.getParentProps()
     };
 };
 
@@ -28,4 +21,4 @@ const mapDispatchTpProps = (dispatch) => {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchTpProps)(MovieExpComp);
+export default connect(mapStateToProps, mapDispatchTpProps)(TreeEvolutionComponent);
