@@ -1,22 +1,17 @@
 import React, {Component} from 'react';
+import ParentTree from './parentTree.component';
+import ChildrenTree from './childrenTree.component';
 
 export default class TreeEvolutionComponent extends Component {
-    generateChildProps = (parenProps) => {
-        const childrenProps = [];
-        return parenProps.map((char) => {
-
-        });
-    }
-
     handleChildSelect = (childProps) => {
 
     }
 
     render() {
         return (
-            <div>
-                <ParentTree parenProps={parentProps}/>
-                <TreeChildren childrenProps={childrenProps}/>
+            <div className="trees-container">
+                <ParentTree parentProps={this.props.parentProps} />
+                <ChildrenTree arentProps={this.props.parentProps} />
             </div>
         );
     }

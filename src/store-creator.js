@@ -1,14 +1,12 @@
 import { createStore, combineReducers } from 'redux';
-import loaderReducer from './sdk/reducers/loader.reducer';
-import movieReducer from './sdk/reducers/movie.reducer';
+import treeEvolutionReducer from './treeEvolution.reducer';
 
-const rootReducer = combineReducers({
-    loader: loaderReducer,
-    movies: movieReducer
-});
+// const rootReducer = combineReducers({
+//     loader: loaderReducer,
+// });
   
 const store = createStore(
-    rootReducer, 
+    treeEvolutionReducer 
 );
 
 export default store;
