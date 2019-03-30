@@ -1,18 +1,28 @@
 import {connect} from 'react-redux';
 import TreeEvolutionComponent from './treeEvolution.component';
-import treeEvolutionApi from '../treeEvolution.api';
-import store from '../store-creator';
+import treeEvolutionApi from '../api/treeEvolution.api';
+import store from '../api/store-creator';
 
 const api = new treeEvolutionApi(store);
 
 const mapStateToProps = () => {
     return {
-        parentProps: api.getParentProps()
+        parentProps: api.getParentProps(),
+        mode: api.getViewMode()
     };
 };
 
-const mapDispatchTpProps = (dispatch) => {
+const mapDispatchTpProps = () => {
     return {
+        setSelectedTree: (treeProps) => {
+            api.updateSelectedTree(treeProps);
+        },
+        updateSelectedTreeFromUrl: () => {
+            api.updateSelectedTreeFromUrl()
+        },
+        setInitialState: () => {
+            api.setInitialState()
+        }
     };
 }
 

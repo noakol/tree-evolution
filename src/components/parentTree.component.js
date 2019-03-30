@@ -1,22 +1,16 @@
 import React, {Component} from 'react';
 import Tree from './templates/treeView';
+import {createStyleFromProps} from './treeEvolution.utils';
 
 export default class ParentTreeComponent extends Component {
-    generateParentStyle() {
-        const {parentProps} = this.props;
-        return {
-            treeStyle: {
-                'background-color': parentProps.mainColor 
-            },
-            leafStyle: {
-                'background-color': parentProps.mainColor 
-            }
-        };
-    }
-
     render() {
+        const {parentProps} = this.props;
         return (
-            <Tree {...this.generateParentStyle()} />
+            <Tree 
+                treeProps={parentProps} 
+                {...createStyleFromProps(parentProps)}
+                containerClassName={"parent"}
+            />
         );
     }
 }

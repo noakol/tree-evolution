@@ -1,0 +1,5 @@
+export default {
+    SET_SELECT_TREE: 'SET_SELECT_TREE',
+    SET_VIEW_MODE: 'SET_VIEW_MODE',
+    CLEAR_STATE: 'CLEAR_STATE'
+};

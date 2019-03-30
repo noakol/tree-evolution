@@ -1,7 +1,6 @@
 import actionTypes from './treeEvolution.actionTypes';
-import initialState from './data';
 
-export default function movie(state = {selectedTree: initialState}, action) {
+export default function movie(state = {}, action) {
   const {type, payload} = action;
     let newState;
     switch (type) {
@@ -11,6 +10,15 @@ export default function movie(state = {selectedTree: initialState}, action) {
           selectedTree: payload
         };
         break;
+      case actionTypes.SET_VIEW_MODE:
+          newState = {
+              ...state,
+              mode: payload
+          };
+          break;
+      case actionTypes.CLEAR_STATE:
+          newState = {};
+          break;
       default:
         newState = state;
         break;
