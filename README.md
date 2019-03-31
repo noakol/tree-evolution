@@ -13,7 +13,7 @@ see create-react-app documentation
 1. download the project
 2. in the project folder run - 'npm i -g serve'
 3. in the project folder run - 'serve -s build'
-4. the app will be served on http://localhost:500
+4. the app will be served on http://localhost:5000
 
 ### Run the application in a developer mode 
 
