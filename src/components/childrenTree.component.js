@@ -29,7 +29,9 @@ export default class ChildrenTreeComponent extends PureComponent {
             <div className="children-container">
                 {childrenProps.length && childrenProps.map((childProps, index) => {
                     return (
-                        <div className="box-wrapper">
+                        <div 
+                            key={index} 
+                            className="box-wrapper">
                             <Tree 
                                 {...createStyleFromProps(childProps)}
                                 handleTreeSelect={this.props.handleChildClick}
