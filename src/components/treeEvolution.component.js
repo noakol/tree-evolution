@@ -16,7 +16,8 @@ export default class TreeEvolutionComponent extends Component {
 
     handleShare = (e) => {
         const url = window.location.href + encodeURI('&mode=present');
-        copy(url, {message: 'A link was coppied in to your clipbaord!'})
+        copy(url);
+        alert('A link was coppied in to your clipbaord!');
     }
 
     handleChildClick = (childProps) => {

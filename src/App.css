@@ -4,8 +4,8 @@
   width: 35px;
   height: 35px;
   right: 0;
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +17,11 @@
 button.share:focus {
   outline: none;
   border: none;
+}
+
+button.share:hover { 
+  outline: none;
+  box-shadow: inset 2px 2px 8px 3px rgba(0, 0, 0, 0.123);
 }
 
 .share img {
@@ -37,15 +42,28 @@ button.share:focus {
   align-items: center;
 }
 
+.box-wrapper {
+  margin: 10px;
+  cursor: pointer;
+}
+
 .box { 
   position: relative;
   display: block;
-  width: 550px;
+  width: 510px;
   height: 470px;
   background: none;
   box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.123);
-  cursor: pointer;
+}
 
+div.box-wrapper:focus { 
+  outline: none;
+  box-shadow: inset 2px 2px 8px 3px rgba(0, 0, 0, 0.123);
+}
+
+div.box-wrapper:hover { 
+  outline: none;
+  box-shadow: inset 2px 2px 8px 3px rgba(0, 0, 0, 0.123);
 }
 
 .box.parent {
@@ -56,7 +74,7 @@ button.share:focus {
 .center-circle {
   position: absolute;
   top: 16.5%;
-  left: 15%;
+  left: 22%;
   width: 60%;
   height: 40%;
   background: #A6BECF;
