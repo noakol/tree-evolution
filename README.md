@@ -1,6 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Description
+
+this app demonstrate the evolution propcess on trees!
+
+### Available Scripts
 
 see create-react-app documentation 
 
